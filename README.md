@@ -22,16 +22,19 @@ Follow these steps to download, install, and run the application:
 ```bash
 git clone https://github.com/soubhagya2001/Gungun-song-player.git
 cd gungun
+```
 
 ### 2. Install Dependencies
 Make sure you have **Node.js** installed. Then run:
 
 ```bash
 npm install
+```
 
 ### 3. Start the Development Server
 ```bash
 npm run dev
+```
 
 ### 4. Open the Application
 Open your browser and navigate to `http://localhost:5173` to access the application.
