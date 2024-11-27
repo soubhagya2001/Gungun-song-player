@@ -61,7 +61,7 @@ export const usePlaylistStore = create<PlaylistStore>((set, get) => ({
     const syncInterval = setInterval(async () => {
       const songs = await fetchSongs();
       set({ songs });
-    }, 600000); // 10 minutes
+    }, 6000000); // 100 minutes
 
     return () => clearInterval(syncInterval);
   },
@@ -128,5 +128,15 @@ export const usePlaylistStore = create<PlaylistStore>((set, get) => ({
         broadcastChannel.postMessage({ type: 'CURRENT_SONG_CHANGED', index: newIndex });
       }
     }
+  },
+  previousSong: () => {
+    const { currentSongIndex, filteredSongs, isLivePlay } = get();
+    if (currentSongIndex > 0) {
+      const newIndex = currentSongIndex - 1;
+      set({ currentSongIndex: newIndex });
+      if (isLivePlay) {
+      broadcastChannel.postMessage({ type: 'CURRENT_SONG_CHANGED', index: newIndex });
+    }
+  }
   },
 }));

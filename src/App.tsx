@@ -47,7 +47,7 @@ export default function App() {
                 <li>Drag and drop to reorder your playlist</li>
                 <li>Use filters to find specific songs</li>
                 <li>Click play button on any song to start playing</li>
-                <li>Enable Live Play to sync music with others</li>
+                {/* <li>Enable Live Play to sync music with others</li> */}
               </ul>
             </div>
             <button
@@ -85,7 +85,7 @@ export default function App() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <LivePlayToggle />
+              {/* <LivePlayToggle /> */}
               <InfoBox />
             </div>
           </div>

@@ -220,7 +220,7 @@ export function AddSongForm() {
         </div>
       </form>
 
-      <div className="flex gap-4 justify-center">
+      {/* <div className="flex gap-4 justify-center">
         <a
           href=""
           target="_blank"
@@ -239,7 +239,7 @@ export function AddSongForm() {
           Axcend Hindi Songs
           <ExternalLink className="w-4 h-4" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
